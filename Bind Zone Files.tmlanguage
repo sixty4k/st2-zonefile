@@ -43,10 +43,28 @@
 			<string>variable.other.timeunit.zone_file</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.other.timeunit.zone_file</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.resourcetype.zone_file</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.single.resource.address.zone_file</string>
+				</dict>
+			</dict>
 			<key>match</key>
-			<string>(IN|in)\s+[A-Za-z]+</string>
+			<string>([A-Za-z0-9-]*)\s+([0-9A-Za-z]*)\s+([I|i][N|n]\s+[A-Za-z]+)\s+(.*)</string>
 			<key>name</key>
-			<string>keyword.resourcetype.zonefile</string>
+			<string>string.quoted.single.address.zone_file</string>
 		</dict>
 	</array>
 	<key>scopeName</key>

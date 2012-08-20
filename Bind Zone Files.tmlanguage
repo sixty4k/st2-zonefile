@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>zone</string>
+	</array>
+	<key>name</key>
+	<string>Bind Zone Files</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>;.*</string>
+			<key>name</key>
+			<string>comment.line.semicolon.zone_file</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>@</string>
+			<key>name</key>
+			<string>keyword.directive.zone_file</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.other.directive.zone_file</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\$(ORIGIN|origin|TTL|ttl|INCLUDE|include)\s*(.*)</string>
+			<key>name</key>
+			<string>keyword.directive.zone_file</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\d+(H|h|D|d|W|w|M|m|Y|y)</string>
+			<key>name</key>
+			<string>variable.other.timeunit.zone_file</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(IN|in)\s+[A-Za-z]+</string>
+			<key>name</key>
+			<string>keyword.resourcetype.zonefile</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.zone_file</string>
+	<key>uuid</key>
+	<string>e7258f23-3f2a-4b03-80e1-ac8990b47a6d</string>
+</dict>
+</plist>

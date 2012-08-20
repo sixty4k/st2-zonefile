@@ -1,0 +1,25 @@
+{ "name": "Bind Zone Files",
+  "scopeName": "text.zone_file",
+  "fileTypes": ["zone"],
+  "patterns": [
+    { "match": ";.*",
+      "name": "comment.line.semicolon.zone_file"
+    },
+    { "match": "@",
+      "name": "keyword.directive.zone_file"
+    },
+    { "match": "\\$(ORIGIN|origin|TTL|ttl|INCLUDE|include)\\s*(.*)",
+      "name": "keyword.directive.zone_file",
+        "captures": {
+          "2": { "name": "variable.other.directive.zone_file" }
+         }
+    },
+    { "match": "\\d+(H|h|D|d|W|w|M|m|Y|y)",
+      "name": "variable.other.timeunit.zone_file"
+    },
+    { "match": "(IN|in)\\s+[A-Za-z]+",
+      "name": "keyword.resourcetype.zonefile"
+    }
+  ],
+  "uuid": "e7258f23-3f2a-4b03-80e1-ac8990b47a6d"
+}

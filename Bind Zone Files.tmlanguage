@@ -30,9 +30,14 @@
 					<key>name</key>
 					<string>variable.other.directive.zone_file</string>
 				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>comment.line.semicolon.zone_file</string>
+				</dict>
 			</dict>
 			<key>match</key>
-			<string>\$(ORIGIN|origin|TTL|ttl|INCLUDE|include)\s*(.*)</string>
+			<string>\$(ORIGIN|origin|TTL|ttl|INCLUDE|include)\s*([^;]*)(;.*)?</string>
 			<key>name</key>
 			<string>keyword.directive.zone_file</string>
 		</dict>
@@ -41,6 +46,41 @@
 			<string>\d+(H|h|D|d|W|w|M|m|Y|y)</string>
 			<key>name</key>
 			<string>variable.other.timeunit.zone_file</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>([A-Za-z0-9_.-]*)\s+([0-9A-Za-z]*)\s+([I|i][N|n]\s+[A-Za-z]+)\s+(.*)\(</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.other.timeunit.zone_file</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.resourcetype.zone_file</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.single.resource.address.zone_file</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\)</string>
+			<key>name</key>
+			<string>string.quoted.single.address.zone_file</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>;.*</string>
+					<key>name</key>
+					<string>comment.line.semicolon.zone_file</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -62,7 +102,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>([A-Za-z0-9-]*)\s+([0-9A-Za-z]*)\s+([I|i][N|n]\s+[A-Za-z]+)\s+(.*)</string>
+			<string>([A-Za-z0-9_.-]*)\s+([0-9A-Za-z]*)\s+([I|i][N|n]\s+[A-Za-z]+)\s+(.*)</string>
 			<key>name</key>
 			<string>string.quoted.single.address.zone_file</string>
 		</dict>

@@ -8,10 +8,11 @@
     { "match": "@",
       "name": "keyword.directive.zone_file"
     },
-    { "match": "\\$(ORIGIN|origin|TTL|ttl|INCLUDE|include)\\s*(.*)",
+    { "match": "\\$(ORIGIN|origin|TTL|ttl|INCLUDE|include)\\s*([^;]*)(;.*)?",
       "name": "keyword.directive.zone_file",
         "captures": {
-          "2": { "name": "variable.other.directive.zone_file" }
+          "2": { "name": "variable.other.directive.zone_file" },
+          "3": { "name": "comment.line.semicolon.zone_file" }
          }
     },
     { "match": "\\d+(H|h|D|d|W|w|M|m|Y|y)",

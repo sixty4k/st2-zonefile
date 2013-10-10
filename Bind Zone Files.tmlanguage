@@ -5,6 +5,7 @@
 	<key>fileTypes</key>
 	<array>
 		<string>zone</string>
+		<string>db</string>
 	</array>
 	<key>name</key>
 	<string>Bind Zone Files</string>

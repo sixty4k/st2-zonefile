@@ -1,6 +1,6 @@
 { "name": "Bind Zone Files",
   "scopeName": "text.zone_file",
-  "fileTypes": ["zone"],
+  "fileTypes": ["zone", "db"],
   "patterns": [
     { "match": ";.*",
       "name": "comment.line.semicolon.zone_file"

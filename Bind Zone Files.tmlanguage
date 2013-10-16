@@ -50,7 +50,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>([A-Za-z0-9_.-]*)\s+([0-9A-Za-z]*)\s+([I|i][N|n]\s+[A-Za-z]+)\s+(.*)\(</string>
+			<string>([A-Za-z0-9_.-]*)\s+([0-9A-Za-z]*)\s+([I|i][N|n]\s+[A-Za-z]+)\s+(.*)\s*(;.*)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>2</key>
@@ -68,9 +68,14 @@
 					<key>name</key>
 					<string>string.quoted.single.resource.address.zone_file</string>
 				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>comment.line.semicolon.zone_file</string>
+				</dict>
 			</dict>
 			<key>end</key>
-			<string>\)</string>
+			<string></string>
 			<key>name</key>
 			<string>string.quoted.single.address.zone_file</string>
 			<key>patterns</key>

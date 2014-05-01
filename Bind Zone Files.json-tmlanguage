@@ -18,7 +18,7 @@
     { "match": "\\d+(H|h|D|d|W|w|M|m|Y|y)",
       "name": "variable.other.timeunit.zone_file"
     },
-    { "begin": "([A-Za-z0-9_.-]*)\\s+([0-9A-Za-z]*)\\s+([I|i][N|n]\\s+[A-Za-z]+)\\s+(.*)\\(",
+    { "begin": "([A-Za-z0-9_.-]*)\\s+(?:([0-9A-Za-z]*)\\s+)?([I|i][N|n]\\s+[A-Za-z]+)\\s+(.*)\\(",
       "beginCaptures": {
           "2": { "name": "variable.other.timeunit.zone_file"},
           "3": { "name": "keyword.resourcetype.zone_file" },
@@ -32,7 +32,7 @@
       "end": "\\)",
       "name": "string.quoted.single.address.zone_file"
     },
-    { "match": "([A-Za-z0-9_.-]*)\\s+([0-9A-Za-z]*)\\s+([I|i][N|n]\\s+[A-Za-z]+)\\s+(.*)",
+    { "match": "([A-Za-z0-9_.-]*)\\s+(?:([0-9A-Za-z]*)\\s+)?([I|i][N|n]\\s+[A-Za-z]+)\\s+(.*)",
         "name": "string.quoted.single.address.zone_file",
         "captures": {
             "2": { "name": "variable.other.timeunit.zone_file"},

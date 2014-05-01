@@ -1,116 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>fileTypes</key>
-	<array>
-		<string>zone</string>
-		<string>db</string>
-	</array>
-	<key>name</key>
-	<string>Bind Zone Files</string>
-	<key>patterns</key>
-	<array>
-		<dict>
-			<key>match</key>
-			<string>;.*</string>
-			<key>name</key>
-			<string>comment.line.semicolon.zone_file</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>@</string>
-			<key>name</key>
-			<string>keyword.directive.zone_file</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>variable.other.directive.zone_file</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>comment.line.semicolon.zone_file</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>\$(ORIGIN|origin|TTL|ttl|INCLUDE|include)\s*([^;]*)(;.*)?</string>
-			<key>name</key>
-			<string>keyword.directive.zone_file</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\d+(H|h|D|d|W|w|M|m|Y|y)</string>
-			<key>name</key>
-			<string>variable.other.timeunit.zone_file</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>([A-Za-z0-9_.-]*)\s+([0-9A-Za-z]*)\s+([I|i][N|n]\s+[A-Za-z]+)\s+(.*)\(</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>variable.other.timeunit.zone_file</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.resourcetype.zone_file</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>string.quoted.single.resource.address.zone_file</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\)</string>
-			<key>name</key>
-			<string>string.quoted.single.address.zone_file</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>;.*</string>
-					<key>name</key>
-					<string>comment.line.semicolon.zone_file</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>variable.other.timeunit.zone_file</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.resourcetype.zone_file</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>string.quoted.single.resource.address.zone_file</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>([A-Za-z0-9_.-]*)\s+([0-9A-Za-z]*)\s+([I|i][N|n]\s+[A-Za-z]+)\s+([^;]*)</string>
-			<key>name</key>
-			<string>string.quoted.single.address.zone_file</string>
-		</dict>
-	</array>
-	<key>scopeName</key>
-	<string>text.zone_file</string>
-	<key>uuid</key>
-	<string>e7258f23-3f2a-4b03-80e1-ac8990b47a6d</string>
-</dict>
-</plist>
+fileTypes: [zone, db]
+name: Bind Zone Files
+patterns:
+- {match: ;.*, name: comment.line.semicolon.zone_file}
+- {match: '@', name: keyword.directive.zone_file}
+- captures:
+    '2': {name: variable.other.directive.zone_file}
+    '3': {name: comment.line.semicolon.zone_file}
+  match: \$(ORIGIN|origin|TTL|ttl|INCLUDE|include)\s*([^;]*)(;.*)?
+  name: keyword.directive.zone_file
+- {match: \d+(H|h|D|d|W|w|M|m|Y|y), name: variable.other.timeunit.zone_file}
+- begin: ([A-Za-z0-9_.-]*)\s+(?:([0-9A-Za-z]*)\s+)?([I|i][N|n]\s+[A-Za-z]+)\s+(.*)\(
+  beginCaptures:
+    '2': {name: variable.other.timeunit.zone_file}
+    '3': {name: keyword.resourcetype.zone_file}
+    '4': {name: string.quoted.single.resource.address.zone_file}
+  end: \)
+  name: string.quoted.single.address.zone_file
+  patterns:
+  - {match: ;.*, name: comment.line.semicolon.zone_file}
+- captures:
+    '2': {name: variable.other.timeunit.zone_file}
+    '3': {name: keyword.resourcetype.zone_file}
+    '4': {name: string.quoted.single.resource.address.zone_file}
+  match: ([A-Za-z0-9_.-]*)\s+(?:([0-9A-Za-z]*)\s+)?([I|i][N|n]\s+[A-Za-z]+)\s+(.*)
+  name: string.quoted.single.address.zone_file
+scopeName: text.zone_file
+uuid: e7258f23-3f2a-4b03-80e1-ac8990b47a6d

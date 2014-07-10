@@ -1,6 +1,6 @@
 #Bind Zone File Syntax Highlighting
 
-I'm loving ST2, but the files I edit most are config files, not code.
+I'm loving Sublime Text, but the files I edit most are config files, not code.
 
 Here's a basic syntax highlighting package for zone files.  Nothing fancy, but I understand how to write a highlighter a *little* better now.  
 

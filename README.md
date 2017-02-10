@@ -9,3 +9,8 @@ As well, cause I couldn't find it doc'd anywhere, there's a list of the generic 
 #Installation
 
 [Package Control](https://packagecontrol.io/) -> `Install package` -> `zone`
+
+
+#Sad Project is Sad
+
+I haven't done anything with this project in *years*. If you like Sublime and Bind, and wish this did more or was better and would like to take over the project, let me know.

@@ -50,7 +50,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>([A-Za-z0-9_.-]*)\s+(?:([0-9A-Za-z]*)\s+)?([I|i][N|n]\s+[A-Za-z]+)\s+(.*)\(</string>
+			<string>([A-Za-z0-9_.-]*)\s+(?:([0-9A-Za-z]*)\s+)?([I|i][N|n]\s+[A-Za-z0-9]+)\s+(.*)\(</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>2</key>
@@ -103,7 +103,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>([A-Za-z0-9_.-]*)\s+(?:([0-9A-Za-z]*)\s+)?([I|i][N|n]\s+[A-Za-z]+)\s+(.*)</string>
+			<string>([A-Za-z0-9_.-]*)\s+(?:([0-9A-Za-z]*)\s+)?([I|i][N|n]\s+[A-Za-z0-9]+)\s+(.*)</string>
 			<key>name</key>
 			<string>string.quoted.single.address.zone_file</string>
 		</dict>

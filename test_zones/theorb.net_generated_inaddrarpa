@@ -1,0 +1,18 @@
+$TTL 3D       ; default ttl for records without a specified lifetime
+$ORIGIN 0.1.2.10.in-addr.arpa.
+@                      IN    SOA    a.ns.example.net. dns.example.net. (
+                                   1543614966   ;  serial number
+                                   16384        ;  ns refresh
+                                   2048         ;  ns retry
+                                   1048576      ;  authority expiry
+                                   2560        );  min (RFC2308 §4)
+                       IN    NS    a.ns.example.net.
+                       IN    NS    b.ns.example.net.
+0                      IN    PTR    0.0.1.2.10.example.net.
+1                      IN    PTR    1.0.1.2.10.example.net.
+2                      IN    PTR    2.0.1.2.10.example.net.
+3                      IN    PTR    3.0.1.2.10.example.net.
+4                      IN    PTR    4.0.1.2.10.example.net.
+5                      IN    PTR    5.0.1.2.10.example.net.
+6                      IN    PTR    6.0.1.2.10.example.net.
+7                      IN    PTR    7.0.1.2.10.example.net.

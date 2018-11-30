@@ -1,0 +1,2 @@
+example.com.    IN    CAA    0 issue "letsencrypt.org"
+example.com.    IN    CAA    0 issue "comodoca.com"

@@ -1,0 +1,22 @@
+$TTL 3D       ; default ttl for records without a specified lifetime
+$ORIGIN example.net.
+@                      IN    SOA    a.ns.example.net. dns.example.net. (
+                                   1543614966   ;  serial number
+                                   16384        ;  ns refresh
+                                   2048         ;  ns retry
+                                   1048576      ;  authority expiry
+                                   2560        );  min (RFC2308 §4)
+                       IN    NS    a.ns.example.net.
+                       IN    NS    b.ns.example.net.
+                       IN    MX    a.mx.example.net.
+a.ns                   IN    A    10.1.0.1
+b.ns                   IN    A    10.2.0.1
+a.mx                   IN    A    10.3.0.1
+0.0.1.2.10             IN    A    10.2.1.0
+1.0.1.2.10             IN    A    10.2.1.1
+2.0.1.2.10             IN    A    10.2.1.2
+3.0.1.2.10             IN    A    10.2.1.3
+4.0.1.2.10             IN    A    10.2.1.4
+5.0.1.2.10             IN    A    10.2.1.5
+6.0.1.2.10             IN    A    10.2.1.6
+7.0.1.2.10             IN    A    10.2.1.7

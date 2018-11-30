@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>fileTypes</key>
@@ -7,6 +7,8 @@
 		<string>zone</string>
 		<string>db</string>
 	</array>
+	<key>first_line_match</key>
+	<string>^$ORIGIN.*|^$TTL.*</string>
 	<key>name</key>
 	<string>Bind Zone Files</string>
 	<key>patterns</key>

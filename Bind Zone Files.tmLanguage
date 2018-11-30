@@ -7,8 +7,6 @@
 		<string>zone</string>
 		<string>db</string>
 	</array>
-	<key>first_line_match</key>
-	<string>^$ORIGIN.*|^$TTL.*</string>
 	<key>name</key>
 	<string>Bind Zone Files</string>
 	<key>patterns</key>
@@ -52,7 +50,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>([A-Za-z0-9_.-]*)\s+(?:([0-9A-Za-z]*)\s+)?([I|i][N|n]\s+[A-Za-z]+)\s+(.*)\(</string>
+			<string>([A-Za-z0-9_.-]*)\s+(?:([0-9A-Za-z]*)\s+)?([I|i][N|n]\s+[A-Za-z0-9]+)\s+(.*)\(</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>2</key>
@@ -105,7 +103,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>([A-Za-z0-9_.-]*)\s+(?:([0-9A-Za-z]*)\s+)?([I|i][N|n]\s+[A-Za-z]+)\s+(.*)</string>
+			<string>([A-Za-z0-9_.-]*)\s+(?:([0-9A-Za-z]*)\s+)?([I|i][N|n]\s+[A-Za-z0-9]+)\s+(.*)</string>
 			<key>name</key>
 			<string>string.quoted.single.address.zone_file</string>
 		</dict>
